@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/pure/pure-min.css">
+  <link rel="stylesheet" href="./Assets/style.css">
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1 style="color: black;">Weather Dashboard</h1>
+        <h5 class="date"></h5>
+    </header>
+
+    <!-- Main section -->
+    <main>
+        <!-- Search input section -->
+            <div >
+                <div class="user-search">
+                    <h2 >Whats Your City Temperature?</h2>
+                    <input  type="text" id="search-value" placeholder="Enter a city...." />
+                    <button class="btn btn-primary" id="search-btn"> <i class="fa fa-search"></i> </button>
+                </div>
+            </div>
+                <!-- Listed cities that is searched -->
+                <div id="menu" >
+                    <div class="pure-menu"><br>
+                        <h2 class="listed-cities">Listed Citites:</22>
+                            <ul class="list-group history">
+                            </ul>
+                            <!-- Clear btn added to clear local storage -->
+                            <button class="btn btn-primary" id="clear-btn"> <i class="fa fa-trash"></i> </button>
+
+                    </div>            
+                </div>
+            
+            <!-- Main content section where current and 5 day forecast is dispolayed -->
+            <div class="main">
+                <div>
+                    <div>
+                        <div id="today" ></div> <br>
+                        <div id="forecast" ></div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    
+
+        <!-- Footer -->
+        <footer>
+            <h2>👨🏾‍💻 </h2>
+        </footer>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="./Assets/index.js"></script>
+</body>
+
+</html>

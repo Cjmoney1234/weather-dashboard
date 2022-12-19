@@ -1,0 +1,264 @@
+/* Entire HTML */
+html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Header */
+header {
+    text-align: center;
+    background-color: lightblue;
+    width: 100%;
+    height: 10%;
+
+}
+
+/* Body background height and background color */
+body {
+    background-color: white;
+    height: 100%;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+/* Search btn */
+.user-search {
+    background-color: rgb(101, 165, 187);
+    text-align: center;
+    padding: 5px;
+}
+
+/*Main contianer for current and 4 day forecast*/
+main {
+    height: 140%;
+    width: 100%;
+}
+
+
+/* Class main where current and 5-day forecast will be displayed */
+.main {
+    margin-top: -80px;
+}
+
+/* Current weather card section today ID */
+#today {
+    text-align: center;
+    margin-left: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#today .card {
+    position: relative;
+    margin: -50px 150px;
+    width: 600px;
+    background-color: lightblue;
+    height: 250px;
+    border-radius: 40px;
+    box-shadow: 0px 8px 16px 4px lightgray;
+    font-weight: bolder;
+}
+
+
+#today .card:hover .card-text {
+    color: red;
+}
+
+#today .card:hover {
+    background-color: white;
+    box-shadow: 20px 20px 80px 20px grey;
+}
+
+/* forecast cards Section */
+
+#forecast {
+    margin-left: 250px;
+}
+
+#forecast .card:hover img {
+    height: 100px;
+}
+
+#forecast h2 {
+    color: red;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.forecast-title {
+    color: black;
+    margin-top: 40px;
+}
+
+#forecast .card-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bolder;
+}
+
+#forecast .card-title {
+    margin-top: 3rem;
+}
+
+#forecast .card {
+    left: 10rem;
+    margin-right: 20px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px 4px #9E9E9E;
+    background-color: rgb(101, 165, 187);
+    width: 190px;
+    text-align: center;
+}
+
+#forecast .card:hover {
+    background-color: white;
+    box-shadow: 20px 20px 80px 20px grey;
+}
+
+#forecast .card:hover .card-text {
+    color: red;
+    font-weight: bolder
+}
+
+
+/* Listed Cities section */
+.list-group {
+    position: relative;
+    background-color: lightblue;
+    color: white;
+    line-height: 2rem;
+    font-size: 20px;
+    width: 12rem;
+}
+
+.list-group li {
+    margin-left: 20px;
+}
+
+.history:hover {
+    cursor: pointer;
+}
+
+/* Clear btn to clear local Storage and searched cities displayed */
+#clear-btn {
+    width: 13.3rem;
+    background-color: rgb(101, 165, 187);
+    border-color: none;
+}
+
+/* Footer */
+footer {
+    bottom: 0;
+    text-align: center;
+    background-color: lightblue;
+    padding: 5px;
+    height: 5%;
+    width: 100%;
+}
+
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 1267px) {
+    body {
+      background-color: rgba(4, 154, 165, 0.445);
+    }
+
+    header{
+        height: 5%;
+    }
+    #today .card {
+        position: relative;
+        margin: 0 -250px;
+        width: 400px;
+        background-color: lightblue;
+        height: 250px;
+        border-radius: 40px;
+        box-shadow: 0px 8px 16px 4px lightgray;
+        font-weight: bolder;
+    }
+    #forecast .card {
+        left: 1rem;
+        margin-right: 10px;
+        border-radius: 25px;
+        box-shadow: 0px 8px 16px 4px #9E9E9E;
+        background-color: rgb(101, 165, 187);
+        width: 190px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #forecast h2 {
+        color: red;
+        font-size: 40px;
+        font-weight: bolder;
+        margin-top: -1rem;
+    }
+    footer {
+        height: 10%;
+    }
+
+    body {
+        height: 120%;
+    }
+    html {
+        font-size: x-small;
+    }
+} 
+
+@media only screen and (max-width: 794px) {
+    header {
+        width: 100%;
+    }
+    body {
+        background-color: red;
+    }
+    
+    #today .card {
+        background-color: lightblue;
+        border-radius: 40px;
+        box-shadow: 0px 8px 16px 4px lightgray;
+        text-align: center;
+        width: 190px;
+        left: -8rem;
+    }
+
+    body {
+        height: 170%;
+        font-size: small;
+    }
+
+    footer {
+        margin-bottom: 3rem;
+        text-align: center;
+        background-color: lightblue;
+        height: 5%;
+    }
+
+    .list-group {
+        position: relative;
+        background-color: lightblue;
+        color: white;
+        line-height: 2rem;
+        font-size: 20px;
+    }
+    #forecast h2 {
+        color: white;
+        font-size: 40px;
+        font-weight: bolder;
+        margin:auto -15rem;
+    }
+
+    #forecast .card {
+        left: -7rem;
+        margin-bottom: 10px;
+    }
+
+    
+    
+    
+
+
+
+
+
+}
