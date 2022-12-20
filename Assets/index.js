@@ -80,6 +80,7 @@ $(document).ready(function () {
         var lon = data.coord.lon;
         var lat = data.coord.lat;
   
+        // Fetch current forecast
         $.ajax({
           type: "GET",
           url: "https://api.openweathermap.org/data/2.5/uvi?appid=40238c556b6406b810e18d4225a53c0c&lat=" + lat + "&lon=" + lon,
@@ -92,7 +93,7 @@ $(document).ready(function () {
           var uvIndex = $("<p>").addClass("card-text").text("UV Index: ");
           var btn = $("<span>").addClass("btn btn-sm").text(uvResponse);
   
-          // Display UV index color 
+          // UV-index color 
           if (uvResponse < 3) {
             btn.addClass("btn-success");
           } else if (uvResponse < 7) {
@@ -113,7 +114,7 @@ $(document).ready(function () {
   
         });
   
-        // merge and add weather images to page
+        // Add weather images to page
         title.append(img);
         cardBody.append(title, temp, humid, wind);
         card.append(cardBody);
@@ -121,7 +122,7 @@ $(document).ready(function () {
         console.log(data);
       });
     }
-    // function weatherForecast(searchCity) 
+    // function to find fetch 5-day forecast 
     function weatherForecast(searchCity) {
       $.ajax({
         type: "GET",
@@ -131,7 +132,7 @@ $(document).ready(function () {
         console.log(data);
         $("#forecast").html("<h2 class='forecast-title'>5-Day Forecast:</h2>").append("<div class=\"row\">");
   
-        //loop to create a new card for 5 days pull data image from search
+        //loop to create 5 days forecast cards
         for (var i = 0; i < data.list.length; i++) {
   
           if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
@@ -144,9 +145,8 @@ $(document).ready(function () {
             var humidForcast = $("<p>").addClass("card-text").text("Humidity: " + data.list[i].main.humidity + "%");
             var tempForcast = $("<p>").addClass("card-text").text("Temperature: " + data.list[i].main.temp + " °F");
   
-            //merge together append
+            //merge together append on page
             colForcast.append(cardForcast.append(cardBodyForcast.append(titleForcast, imgForcast, tempForcast, humidForcast)));
-            //append card to column, body to card, and other elements to body
             $("#forecast .row").append(colForcast);
           }
         }
